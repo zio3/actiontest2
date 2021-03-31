@@ -25,9 +25,12 @@ jobs:
       - name: Slack Notification
         uses: tokorom/action-slack-incoming-webhook@main
         env:
-          INCOMING_WEBHOOK_URL: ${{ secrets.SLACKWEBHOOKURL}}
+          INCOMING_WEBHOOK_URL: ${{ secrets.SLACKWEBHOOKURL}}:
+          FIRST_NAME: Mona
+          middle_name: The
+          Last_Name: Octocat
         with:
-          text: "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $INCOMING_WEBHOOK_URL"
+          text: "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
 
       - name: "Hello world when it's Monday"
         run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
