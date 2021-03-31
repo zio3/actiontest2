@@ -27,6 +27,6 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACKWEBHOOKURL}}
         with:
-          text: Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
+          text: "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
 
       - run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
