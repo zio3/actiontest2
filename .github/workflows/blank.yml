@@ -27,4 +27,4 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACKWEBHOOKURL}}
         with:
-          text: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+          text: "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
