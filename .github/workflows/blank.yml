@@ -30,7 +30,7 @@ jobs:
           text: "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $INCOMING_WEBHOOK_URL"
 
       - name: "Hello world when it's Monday"
-        run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
+        run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
         env:
           FIRST_NAME: Mona
           middle_name: The
