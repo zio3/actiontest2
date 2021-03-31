@@ -42,10 +42,6 @@ jobs:
                   "value": "${{ env.COMMIT_MESSAGE }}"
                 },
                 {
-                  "title": "Repository",
-                  "value": "https://github.com/${{ github.repository }}"
-                },
-                {
                   "title": "Branch",
                   "value": "${{ github.ref }}",
                   "short": "true"
