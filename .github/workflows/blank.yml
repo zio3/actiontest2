@@ -42,32 +42,20 @@ jobs:
                   "value": "${{ env.COMMIT_MESSAGE }}"
                 },
                 {
-                  "title": "GitHub Actions",
-                  "value": "${{ github.action }}"
+                  "title": "Repository",
+                  "value": "https://github.com/${{ github.repository }}"
                 },
                 {
-                  "title": "GitHub workflow",
-                  "value": "${{ github.workflow }}"
-                },
-                {
-                  "title": "GitHub ref",
+                  "title": "Branch",
                   "value": "${{ github.ref }}"
                 },
                 {
-                  "title": "GitHub repository",
-                  "value": "${{ github.repository }}"
+                  "title": "Workflow",
+                  "value": "${{ github.workflow }}"
                 },
                 {
-                  "title": "GitHub Actoin URL",
-                  "value": "${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}"
-                },
-                {
-                  "title": "GitHub Actions URL2",
-                  "value": "${{ github.event.repository }}/actions/runs/${{ github.run_id }}"
-                },
-                {
-                  "title": "Compare URL",
-                  "value": "${{ github.event.compare }}"
+                  "title": "Workflow Detailss",
+                  "value": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
                 }
               ]
             }
