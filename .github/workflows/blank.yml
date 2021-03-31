@@ -31,6 +31,30 @@ jobs:
           Last_Name: Octocat
         with:
           text: "Hello ${{ secrets.SLACK_WEBHOOK_URL }}"
+          attachments: |
+           [
+            {
+              "color": "good",
+              "author_name": "${{ github.actor }}",
+              "author_icon": "${{ github.event.sender.avatar_url }}",
+              "fields": [
+                {
+                  "title": "Commit Message",
+                  "value": "${{ env.COMMIT_MESSAGE }}"
+                },
+                {
+                  "title": "GitHub Actions URL",
+                  "value": "${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}"
+                },
+                {
+                  "title": "Compare URL",
+                  "value": "${{ github.event.compare }}"
+                }
+              ]
+            }
+           ]          
+          
+          
 
       - name: "Hello world when it's Monday"
         run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
