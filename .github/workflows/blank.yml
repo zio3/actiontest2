@@ -46,6 +46,18 @@ jobs:
                   "value": "${{ github.action }}"
                 },
                 {
+                  "title": "GitHub workflow",
+                  "value": "${{ github.workflow }}"
+                },
+                {
+                  "title": "GitHub ref",
+                  "value": "${{ github.ref }}"
+                },
+                {
+                  "title": "GitHub repository",
+                  "value": "${{ github.repository }}"
+                },
+                {
                   "title": "GitHub Actoin URL",
                   "value": "${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}"
                 },
