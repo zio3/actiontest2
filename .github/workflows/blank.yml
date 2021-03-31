@@ -29,7 +29,7 @@ jobs:
         with:
           text: "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday! $INCOMING_WEBHOOK_URL"
 
-- name: "Hello world when it's Monday"
+      - name: "Hello world when it's Monday"
         run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
         env:
           FIRST_NAME: Mona
