@@ -44,7 +44,7 @@ jobs:
                 },
                 {
                   "title": "GitHub Actions URL",
-                  "value": "${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}"
+                  "value": "${{ github.event.html_url }}/actions/runs/${{ github.run_id }}"
                 },
                 {
                   "title": "Compare URL",
