@@ -30,7 +30,6 @@ jobs:
           middle_name: The
           Last_Name: Octocat
         with:
-          text: "Hello ${{ secrets.SLACK_WEBHOOK_URL }}"
           attachments: |
            [
             {
@@ -44,7 +43,11 @@ jobs:
                 },
                 {
                   "title": "GitHub Actions URL",
-                  "value": "${{ github.event.html_url }}/actions/runs/${{ github.run_id }}"
+                  "value": "${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}"
+                },
+                {
+                  "title": "GitHub Actions URL2",
+                  "value": "${{ github.event.repository }}/actions/runs/${{ github.run_id }}"
                 },
                 {
                   "title": "Compare URL",
