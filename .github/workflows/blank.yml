@@ -42,7 +42,11 @@ jobs:
                   "value": "${{ env.COMMIT_MESSAGE }}"
                 },
                 {
-                  "title": "GitHub Actions URL",
+                  "title": "GitHub Actions",
+                  "value": "${{ github.action }}"
+                },
+                {
+                  "title": "GitHub Actoin URL",
                   "value": "${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}"
                 },
                 {
