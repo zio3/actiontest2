@@ -47,11 +47,13 @@ jobs:
                 },
                 {
                   "title": "Branch",
-                  "value": "${{ github.ref }}"
+                  "value": "${{ github.ref }}",
+                  "short": "true"
                 },
                 {
                   "title": "Workflow",
-                  "value": "${{ github.workflow }}"
+                  "value": "${{ github.workflow }}",
+                  "short": "true"
                 },
                 {
                   "title": "Workflow Detailss",
